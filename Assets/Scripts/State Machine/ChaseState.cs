@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics;
+using UnityEngine;
 
 namespace State_Machine
 {
@@ -26,7 +27,18 @@ namespace State_Machine
         public override void OnStateEnter()
         {
             StateController.ChangeColor(Color.green);
-            StateController.ai.agent.speed = .7f;
+            StateController.ai.agent.speed = 5f;
+
+            void OnCollisionEnter(Collision collision)
+            {
+                if (collision.transform.name == "Barn")
+                {
+                    KeepScore.Score += 1;
+                    
+                }
+
+            }
+                
         }
     }
 }
