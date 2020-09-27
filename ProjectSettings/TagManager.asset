@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - navpoint
+  - Animal
   layers:
   - Default
   - TransparentFX
