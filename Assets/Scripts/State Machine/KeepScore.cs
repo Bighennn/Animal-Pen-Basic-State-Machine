@@ -6,6 +6,7 @@ public class KeepScore : MonoBehaviour
 {
     public static int Score = 0;
 
+
     //var rand = Random.Range(-4.5f, 4.5f);
     // Start is called before the first frame update
     void OnTriggerEnter(Collider other)
@@ -16,7 +17,7 @@ public class KeepScore : MonoBehaviour
 
             Score++;
 
-            other.transform.position = new Vector3(15, transform.position.y, transform.position.z);
+            other.transform.position = new Vector3(Random.Range(0, 30), transform.position.y, Random.Range(-20, 20));
 
         }
         
